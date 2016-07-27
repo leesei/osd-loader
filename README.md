@@ -1,18 +1,20 @@
 # OpenSeadragon Loader
 
 Clone this repo and serve it via HTTP server (e.g. `ecstatic`, `python -m SimpleHTTPServer`).  
-Visit the page and use query `source` in URL to specify an arbitrary source to load.
-The HTTP server serving the tile source should support CORS.
+Visit the page and use query param `source` to specify an arbitrary source *URL* to load (only URL is supported).  
+e.g.: [http://localhost/osd-loader/?source=http://image.server/path-to-tile](http://localhost/osd-loader/?source=http://image.server/path-to-tile)  
+The source URL will be passed to `tileSource` of OpenSeadragon, see [supported sources](http://openseadragon.github.io/#examples-and-features).  
+The HTTP server serving the tile source should support [CORS](http://enable-cors.org/).
 
 ### Sample commands
 
 These are exposed to `window`:
-- viewer
-- viewport
-- tiledImage
-- navigator
+- `viewer`
+- `viewport`
+- `tiledImage`
+- `navigator`
 
-You can control OSD with these commands in console (`F12`).
+You can control the viewer with these commands in console (`F12`).
 
 ```js
 // 70% of image width, 70% of image height 
@@ -28,4 +30,4 @@ viewport.setRotation(0)
 viewport.setRotation(45)
 ```
 
-See [OSD doc](http://openseadragon.github.io/docs/) for reference.
+See [OpenSeadragon doc](http://openseadragon.github.io/docs/) for API reference.
