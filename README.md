@@ -1,6 +1,6 @@
 # OpenSeadragon Loader
 
-Clone this repo and serve it via HTTP server (e.g. `ecstatic`, `python -m SimpleHTTPServer`).  
+Clone this repo and serve it via HTTP server (e.g. `ecstatic`, `python2 -m SimpleHTTPServer`, `python3 -m http.server`).  
 Visit the page and use query param `source` to specify an arbitrary source *URL* to load (only URL is supported).  
 e.g.: [http://localhost/osd-loader/?source=http://image.server/path-to-tile](http://localhost/osd-loader/?source=http://image.server/path-to-tile)  
 The source URL will be passed to `tileSource` of OpenSeadragon, see [supported sources](http://openseadragon.github.io/#examples-and-features).  
